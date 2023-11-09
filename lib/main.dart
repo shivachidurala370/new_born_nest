@@ -2,6 +2,7 @@ import 'dart:async';
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/screen1.dart';
 import 'package:new_born_nest/screen2.dart';
 
@@ -63,10 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Text(
                 "NewBornNest",
-                style: TextStyle(
+                style: GoogleFonts.kaushanScript(
                   fontSize: 34,
                   fontWeight: FontWeight.w400,
-                  fontFamily: 'KaushanScript',
                 ),
               ),
               SizedBox(

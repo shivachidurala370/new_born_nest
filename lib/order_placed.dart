@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:new_born_nest/add_cart.dart';
 import 'package:new_born_nest/order_confirm.dart';
 
 class Orderplace extends StatefulWidget {
@@ -28,19 +30,28 @@ class _OrderplaceState extends State<Orderplace> {
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Addbag()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                   SizedBox(
                     width: 86,
                   ),
-                  Text(
-                    "Shipping Address",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF000000)),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Shipping Address",
+                      style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF000000)),
+                    ),
                   )
                 ],
               ),

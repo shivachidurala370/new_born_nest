@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/categories.dart';
 import 'package:new_born_nest/dashboard.dart';
 import 'package:new_born_nest/profile.dart';
@@ -21,11 +22,10 @@ class _MyorderState extends State<Myorder> {
           padding: const EdgeInsets.only(left: 16),
           child: Text(
             "NewBornNest",
-            style: TextStyle(
+            style: GoogleFonts.kaushanScript(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: Color(0xFF000000),
-              fontFamily: 'KaushanScript',
             ),
           ),
         ),

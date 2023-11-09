@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/order_placed.dart';
+import 'package:new_born_nest/product_details.dart';
+import 'package:new_born_nest/product_page.dart';
 
 class Addbag extends StatefulWidget {
   const Addbag({super.key});
@@ -27,19 +30,30 @@ class _AddbagState extends State<Addbag> {
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => productdetail()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                   SizedBox(
                     width: 86,
                   ),
-                  Text(
-                    "Shopping bag",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF000000)),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Shopping bag",
+                      style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF000000)),
+                    ),
                   )
                 ],
               ),

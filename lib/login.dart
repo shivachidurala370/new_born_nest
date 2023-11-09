@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/otp.dart';
 
 class login extends StatefulWidget {
@@ -23,7 +24,7 @@ class _loginState extends State<login> {
             children: [
               Text(
                 "Login",
-                style: TextStyle(
+                style: GoogleFonts.inter(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF000000)),
@@ -52,14 +53,15 @@ class _loginState extends State<login> {
               ),
               Container(
                 height: 30,
-                width: 250,
+                width: 300,
                 child: Text(
                   "Add your phone number. we’ll send you a verification code so we know yoy are real!",
-                  style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0xFF4E4C4C),
-                      overflow: TextOverflow.clip),
+                  style: GoogleFonts.inter(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF4E4C4C),
+                  ),
+                  overflow: TextOverflow.clip,
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -67,7 +69,7 @@ class _loginState extends State<login> {
                 height: 20,
               ),
               TextField(
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
                     color: Color(0xFF4E4C4C)),
@@ -76,11 +78,15 @@ class _loginState extends State<login> {
                         borderSide: BorderSide(color: Color(0xFF4E4C4C))),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Color(0xFF4E4C4C))),
-                    labelStyle: TextStyle(color: Color(0xFF4E4C4C)),
+                    labelStyle: GoogleFonts.poppins(
+                        color: Color(0xFF4E4C4C),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500),
                     labelText: "Enter Mobile Number",
                     prefix: Text(
                       "(+91)",
-                      style: TextStyle(fontSize: 12, color: Color(0xFF4E4C4C)),
+                      style: GoogleFonts.poppins(
+                          fontSize: 12, color: Color(0xFF4E4C4C)),
                     ),
                     suffixIcon: Icon(
                       Icons.check_circle,
@@ -106,7 +112,10 @@ class _loginState extends State<login> {
                       borderRadius: BorderRadius.circular(5)),
                   child: Text(
                     "Send",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF000000)),
                   ),
                 ),
               )

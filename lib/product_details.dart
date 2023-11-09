@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_born_nest/add_cart.dart';
+import 'package:new_born_nest/product_page.dart';
 
 class productdetail extends StatefulWidget {
   const productdetail({super.key});
@@ -28,9 +29,17 @@ class _productdetailState extends State<productdetail> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => productpage()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                   Row(
                     children: [
@@ -339,7 +348,7 @@ class _productdetailState extends State<productdetail> {
                       ],
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 14,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -372,7 +381,7 @@ class _productdetailState extends State<productdetail> {
                       ],
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 14,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

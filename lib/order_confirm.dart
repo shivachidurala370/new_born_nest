@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:new_born_nest/order_placed.dart';
 import 'package:new_born_nest/succesful_page.dart';
 
 class Confirmorder extends StatefulWidget {
@@ -29,16 +31,24 @@ class _ConfirmorderState extends State<Confirmorder> {
               ]),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Orderplace()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                   SizedBox(
                     width: 86,
                   ),
                   Text(
                     "Check Out",
-                    style: TextStyle(
+                    style: GoogleFonts.inter(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF000000)),

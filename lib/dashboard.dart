@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/categories.dart';
 import 'package:new_born_nest/my_orders.dart';
 import 'package:new_born_nest/profile.dart';
@@ -48,11 +49,11 @@ class _dashboardState extends State<dashboard> {
             padding: const EdgeInsets.only(left: 16),
             child: Text(
               "NewBornNest",
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xFF000000),
-                  fontFamily: 'KaushanScript'),
+              style: GoogleFonts.kaushanScript(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF000000),
+              ),
             ),
           ),
           leading: Image.asset(
@@ -150,7 +151,10 @@ class _dashboardState extends State<dashboard> {
               alignment: Alignment.center,
               child: Text(
                 "Shop by categories",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                style: GoogleFonts.inter(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF000000)),
               ),
             ),
             SizedBox(
@@ -177,7 +181,7 @@ class _dashboardState extends State<dashboard> {
                         ),
                         Text(
                           text[index],
-                          style: TextStyle(
+                          style: GoogleFonts.inter(
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF000000)),
@@ -222,6 +226,7 @@ class _dashboardState extends State<dashboard> {
                     children: [
                       Icon(
                         Icons.alarm,
+                        size: 16,
                         color: Color(0xFF000000),
                       ),
                       SizedBox(
@@ -229,8 +234,10 @@ class _dashboardState extends State<dashboard> {
                       ),
                       Text(
                         "Flash Sale",
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600),
+                        style: GoogleFonts.inter(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF000000)),
                       )
                     ],
                   ),
@@ -238,8 +245,10 @@ class _dashboardState extends State<dashboard> {
                     children: [
                       Text(
                         "End in",
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600),
+                        style: GoogleFonts.inter(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFF000000)),
                       ),
                       SizedBox(
                         width: 10,

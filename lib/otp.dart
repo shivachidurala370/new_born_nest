@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/dashboard.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
@@ -33,18 +34,18 @@ class _otpscreenState extends State<otpscreen> {
               ),
               Text(
                 "NewBornNest",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF000000),
-                    fontFamily: 'KaushanScript'),
+                style: GoogleFonts.kaushanScript(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF000000),
+                ),
               ),
               SizedBox(
                 height: 42,
               ),
               Text(
                 "Verification",
-                style: TextStyle(
+                style: GoogleFonts.inter(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF000000)),
@@ -54,7 +55,7 @@ class _otpscreenState extends State<otpscreen> {
               ),
               Text(
                 "Enter Your OTP Code",
-                style: TextStyle(
+                style: GoogleFonts.inter(
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
                     color: Color(0xFF4E4C4C)),
@@ -94,7 +95,10 @@ class _otpscreenState extends State<otpscreen> {
                       borderRadius: BorderRadius.circular(5)),
                   child: Text(
                     "Verify OTP",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF000000)),
                   ),
                 ),
               ),
@@ -105,11 +109,12 @@ class _otpscreenState extends State<otpscreen> {
                 width: 200,
                 child: Text(
                   "Didn’t you receive any code? Resend New Code",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF4E4C4C),
-                      overflow: TextOverflow.clip),
+                  style: GoogleFonts.inter(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF4E4C4C),
+                  ),
+                  overflow: TextOverflow.clip,
                   textAlign: TextAlign.center,
                 ),
               ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/login.dart';
+import 'package:new_born_nest/screen2.dart';
 
 class screen3 extends StatefulWidget {
   const screen3({super.key});
@@ -29,11 +31,17 @@ class _screen3State extends State<screen3> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset(
-                    "assets/Vector.png",
-                    height: 10,
-                    width: 16,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => screen2()));
+                    },
+                    child: Image.asset(
+                      "assets/Vector.png",
+                      height: 10,
+                      width: 16,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                 ],
               ),
@@ -54,7 +62,7 @@ class _screen3State extends State<screen3> {
               ),
               Text(
                 "Back to shop",
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
@@ -65,12 +73,13 @@ class _screen3State extends State<screen3> {
               Container(
                 alignment: Alignment.center,
                 height: 100,
-                width: 200,
+                width: 180,
                 child: RichText(
                   overflow: TextOverflow.clip,
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                       text: "More than 25,000",
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFF000000)),
@@ -81,7 +90,7 @@ class _screen3State extends State<screen3> {
                         )),
                         TextSpan(
                             text: "Product Cares",
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xFF000080))),
@@ -91,7 +100,7 @@ class _screen3State extends State<screen3> {
                         )),
                         TextSpan(
                           text: "find you and your little one",
-                          style: TextStyle(
+                          style: GoogleFonts.inter(
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
                               color: Color(0xFF000000)),

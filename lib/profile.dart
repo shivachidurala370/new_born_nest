@@ -2,6 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_born_nest/categories.dart';
 import 'package:new_born_nest/dashboard.dart';
 import 'package:new_born_nest/my_orders.dart';
@@ -26,11 +27,11 @@ class _ProfileState extends State<Profile> {
             padding: const EdgeInsets.only(left: 16),
             child: Text(
               "NewBornNest",
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xFF000000),
-                  fontFamily: 'KaushanScript'),
+              style: GoogleFonts.kaushanScript(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF000000),
+              ),
             ),
           ),
           leading: Image.asset(
@@ -196,7 +197,13 @@ class _ProfileState extends State<Profile> {
                       Icons.arrow_forward_ios,
                       size: 16,
                       color: Color(0xFFDEDDDD),
-                    )),
+                    ),
+                    hintStyle: GoogleFonts.inter(
+                        fontSize: 8,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFFE73939)),
+                    hintText:
+                        "Please fill the email address in the correct format"),
               ),
               SizedBox(
                 height: 6,
@@ -216,7 +223,12 @@ class _ProfileState extends State<Profile> {
                       Icons.arrow_forward_ios,
                       size: 16,
                       color: Color(0xFFDEDDDD),
-                    )),
+                    ),
+                    hintStyle: GoogleFonts.inter(
+                        fontSize: 8,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFFE73939)),
+                    hintText: "Please enter 10 Mobile Number"),
               ),
               SizedBox(
                 height: 24,

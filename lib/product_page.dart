@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:new_born_nest/categories.dart';
 import 'package:new_born_nest/product_details.dart';
 
 class productpage extends StatefulWidget {
@@ -77,9 +79,17 @@ class _productpageState extends State<productpage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.arrow_back,
-                    color: Color(0xFF000000),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => categories()));
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                   Align(
                     alignment: Alignment.center,
@@ -87,7 +97,7 @@ class _productpageState extends State<productpage> {
                       children: [
                         Text(
                           "Cosmetics",
-                          style: TextStyle(
+                          style: GoogleFonts.inter(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                               color: Color(0xFF000000)),
@@ -129,7 +139,7 @@ class _productpageState extends State<productpage> {
                         color: Color(0xFF000000),
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -177,7 +187,7 @@ class _productpageState extends State<productpage> {
                   itemCount: 5),
             ),
             SizedBox(
-              height: 20,
+              height: 16,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -234,8 +244,8 @@ class _productpageState extends State<productpage> {
                       ),
                       Image.asset(
                         "assets/images/filter.png",
-                        height: 12,
-                        width: 12,
+                        height: 14,
+                        width: 14,
                         color: Color(0xFF000000).withOpacity(0.3),
                       )
                     ],
@@ -244,11 +254,11 @@ class _productpageState extends State<productpage> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 16,
             ),
             Container(
-              padding: EdgeInsets.only(top: 10),
-              height: 566,
+              padding: EdgeInsets.only(top: 12),
+              height: 582,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Color(0xFFEFEFEF),
@@ -259,63 +269,72 @@ class _productpageState extends State<productpage> {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 10,
-                    mainAxisSpacing: 14,
+                    mainAxisSpacing: 6,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      height: 168,
-                      width: 168,
-                      decoration: BoxDecoration(
-                          //color: Color(0xFFffffff),
-                          //borderRadius: BorderRadius.circular(5)),
-                          ),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            images[index],
-                            height: 150,
-                          ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => productdetail()));
-                            },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
-                              height: 36,
-                              width: 150,
-                              decoration: BoxDecoration(
+                    return Column(
+                      children: [
+                        Container(
+                          height: 140,
+                          width: 168,
+                          decoration: BoxDecoration(
+                              color: Color(0xFFffffff),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    images[index],
+                                  ),
+                                  fit: BoxFit.cover)),
+                          // child: Image.asset(
+                          //   images[index],
+                          // ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => productdetail()));
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            height: 28,
+                            width: 168,
+                            decoration: BoxDecoration(
                                 color: Color(0xFFffffff),
                                 borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(5),
                                     bottomRight: Radius.circular(5)),
-                              ),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    text1[index],
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600,
-                                        color: Color(0xFF000000)),
-                                  ),
-                                  Text(
-                                    text2[index],
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w600,
-                                        color: Color(0xFF19A51A)),
-                                  )
-                                ],
-                              ),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Color(0xFF000000).withOpacity(0.3),
+                                      blurRadius: 4,
+                                      offset: Offset(0, -4))
+                                ]),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  text1[index],
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF000000)),
+                                ),
+                                Text(
+                                  text2[index],
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFF19A51A)),
+                                )
+                              ],
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     );
                   }),
             ),

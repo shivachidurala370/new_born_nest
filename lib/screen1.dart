@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:new_born_nest/dashboard.dart';
 import 'package:new_born_nest/screen2.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class screen1 extends StatefulWidget {
   const screen1({super.key});
@@ -28,13 +30,18 @@ class _screen1State extends State<screen1> {
             children: [
               Align(
                 alignment: Alignment.topRight,
-                child: Text(
-                  "SKIP",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF000000),
-                    fontFamily: 'Inter',
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => dashboard()));
+                  },
+                  child: Text(
+                    "SKIP",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF000000),
+                    ),
                   ),
                 ),
               ),
@@ -47,7 +54,7 @@ class _screen1State extends State<screen1> {
               ),
               Text(
                 "Buy all baby clothes",
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
@@ -58,12 +65,13 @@ class _screen1State extends State<screen1> {
               Container(
                 alignment: Alignment.center,
                 height: 100,
-                width: 220,
+                width: 200,
                 child: RichText(
                   overflow: TextOverflow.clip,
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                       text: "Search",
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFF000000)),
@@ -74,7 +82,7 @@ class _screen1State extends State<screen1> {
                         )),
                         TextSpan(
                             text: "latest clothes",
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xFF000080))),
@@ -84,7 +92,7 @@ class _screen1State extends State<screen1> {
                         )),
                         TextSpan(
                             text: "for your cute one. A big range of clothes",
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16,
                                 color: Color(0xFF000000)))
